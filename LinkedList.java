@@ -113,7 +113,14 @@ public class LinkedList {
 		list.create(70);
 		list.delete(56);
 		
+		list.create(56);
+		list.create(30);
+		list.create(70);
+		list.delete(70);
+		
 		list.display();
+		
+		
 		
 	}
 }
