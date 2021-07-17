@@ -57,6 +57,21 @@ public class LinkedList {
     	newNode.next = prev.next;
     	prev.next = newNode; 
     }
+	public void delete(int num) {
+        Node temp = head, prev = null;
+        if (temp != null && temp.num == num) {
+        	head = temp.next; 
+        	return;
+        }
+        while (temp != null && temp.num != num) {
+        	prev = temp;
+            temp = temp.next;
+        }
+        if (temp == null) {
+        	return;
+        }
+         prev.next = temp.next;
+    }
 	public void display() {
 		Node current = head;
 
@@ -79,18 +94,24 @@ public class LinkedList {
 		list.create(56);
 		list.create(30);
 		list.create(70);
-		
+	
 		list.addNode(70);
 		list.addNode(30);
 		list.addNode(56);
 		
 		list.appendNode(56);
 		list.appendNode(30);
-		list.appendNode(70);
+		list.appendNode(70);;
+
 		
 		list.create(56);
 		list.create(70);
 		list.insert(30,list.head);
+		
+		list.create(56);
+		list.create(30);
+		list.create(70);
+		list.delete(56);
 		
 		list.display();
 		
