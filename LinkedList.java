@@ -72,6 +72,28 @@ public class LinkedList {
         }
          prev.next = temp.next;
     }
+	public void sortList() {
+        Node current = head, index = null;
+        int temp;
+        if (head == null) {
+            return;
+        }
+        else {
+            while (current != null) {
+                index = current.next;
+                while (index != null) {
+                    if (current.num > index.num) {
+                        temp = current.num;
+                        current.num = index.num;
+                        index.num = temp;
+                    }
+  
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }
 	public void display() {
 		Node current = head;
 
@@ -101,7 +123,7 @@ public class LinkedList {
 		
 		list.appendNode(56);
 		list.appendNode(30);
-		list.appendNode(70);;
+		list.appendNode(70);
 
 		
 		list.create(56);
@@ -134,6 +156,11 @@ public class LinkedList {
 		list.create(70);
 		list.delete(40);
 		
+		list.create(56);
+		list.create(30);
+		list.create(40);
+		list.create(70);
+		list.sortList();
 		list.display();
 		
 		
