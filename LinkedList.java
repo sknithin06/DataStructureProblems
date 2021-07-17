@@ -123,6 +123,17 @@ public class LinkedList {
 		list.create(70);
 		list.insert(40,list.head.next);
 		
+		list.create(56);
+		list.create(30);
+		list.create(40);
+		list.create(70);
+		
+		list.create(56);
+		list.create(30);
+		list.create(40);
+		list.create(70);
+		list.delete(40);
+		
 		list.display();
 		
 		
