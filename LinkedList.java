@@ -28,6 +28,17 @@ public class LinkedList {
 		}
 		return newNode;
 	}
+	public void addNode(int num) {
+		Node newNode = new Node(num);
+		 
+		if (head == null) {
+			head = newNode;
+		}
+		else {
+			newNode.next = head;
+			head = newNode;
+		}
+	}
 	public void display() {
 		Node current = head;
 
@@ -50,6 +61,10 @@ public class LinkedList {
 		list.create(56);
 		list.create(30);
 		list.create(70);
+		
+		list.addNode(70);
+		list.addNode(30);
+		list.addNode(56);
 		
 		list.display();
 		
