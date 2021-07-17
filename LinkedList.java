@@ -52,6 +52,11 @@ public class LinkedList {
 		}	
 	    tail.next = newNode;
     }
+	public void insert(int num, Node prev) {
+    	Node newNode = new Node(num);
+    	newNode.next = prev.next;
+    	prev.next = newNode; 
+    }
 	public void display() {
 		Node current = head;
 
@@ -82,6 +87,10 @@ public class LinkedList {
 		list.appendNode(56);
 		list.appendNode(30);
 		list.appendNode(70);
+		
+		list.create(56);
+		list.create(70);
+		list.insert(30,list.head);
 		
 		list.display();
 		
